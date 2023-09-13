@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container" id="panel" >
+    <form class="row g-3 needs-validation my-5" novalidate>
+      <div class="col-12">
+        <label for="validationCustom01" class="form-label h3">Your Post</label>
+        <div class="d-flex gap-3">
+            <textarea type="text" class="form-control form-control-lg" id="validationCustom01" value="Mark" required></textarea>
+            <button class="btn btn-warning" type="submit">Share</button>
+        </div>
+      </div>
+      <div class="col-12">
+      </div>
+    </form> 
+
+
+    <div class="my-5 d-flex flex-column gap-5" id="posts">
+        <div class="card shadow">
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/post-like-and-comment-2592610-2175176.png" class="card-img-top" style="object-fit: cover;" height="250" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <h6 class="card-subtitle mt-4 mb-3 text-muted ">11:00 11.11.2023</h6>
+              <div class="d-flex align-items-center gap-2"> 
+                <img class="rounded-circle shadow" width="50" height="50" style="object-fit: cover;" src="https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/1255/2020/05/18091119/avatar.jpg"></img>
+                <p class="h6">Perriemm MMM</p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+</main> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./service.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
