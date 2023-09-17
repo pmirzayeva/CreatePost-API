@@ -1,17 +1,20 @@
 const baseUrl="https://blog-api-t6u0.onrender.com"
 
 const getPosts= async ()=>{
-
-   try{
-       const response=await fetch(baseUrl+"/posts",
-       {method:"GET"})
-       const data=await response.json()
-       console.log(data);
-
-       return data
-   }catch(err){
-       console.log(err);
-   }
+    try {
+        const response = await fetch(baseUrl + "/posts", {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "GET",
+        });
+    
+        const data = await response.json();
+    
+        return data;
+      } catch (err) {
+        console.log("err", err);
+      }
 }
 //  getPosts()
 
@@ -20,9 +23,9 @@ const createPost= async (form)=>{
 
    try{
        const response=await fetch(baseUrl+"/posts",
-       {method:"POST",headers:{ "Content-Type": "application/json"},body: JSON.stringify(form)})
-
-
+       {method:"POST",
+       headers:{ "Content-Type": "application/json"},
+       body: JSON.stringify(form)})
 
        const data=await response.json()
        console.log(data);
@@ -58,18 +61,20 @@ const updatePost= async (id,form)=>{
 
 
 const rmvPost= async (id)=>{
+  try {
+    const response = await fetch(baseUrl + "/posts/" + id, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "DELETE",
+    });
 
-   try{
-       const response=await fetch(baseUrl+"/posts/"+id,
-       {method:"DELETE"})
+    const data = await response.json();
 
+    console.log("data", data);
 
-
-       const data=await response.json()
-       console.log(data);
-
-       return data
-   }catch(err){
-       console.log(err);
-   }
+    return data;
+  } catch (err) {
+    console.log("err", err);
+  }
 }

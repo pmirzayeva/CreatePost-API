@@ -7,13 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <main class="container" id="panel" >
-    <form class="row g-3 needs-validation my-5" novalidate>
+    <main class="container d-none" id="panel" >
+    <div class="row g-3 needs-validation my-5">
       <div class="col-12">
         <label for="validationCustom01" class="form-label h3">Your Post</label>
         <div class="d-flex gap-3">
-            <textarea type="text" class="form-control form-control-lg" id="validationCustom01" value="Mark" required></textarea>
-            <button class="btn btn-warning" type="submit">Share</button>
+           <input type="text" class="form-control form-control-lg" id="postInput" value="" placeholder="Post Title" required/>
+            <textarea type="text" class="form-control form-control-lg" id="postBodyInput" value="" placeholder="Post Description" required></textarea>
+            <button class="btn btn-warning" id="shareBtn">Share</button>
         </div>
       </div>
       <div class="col-12">
@@ -22,7 +23,7 @@
 
 
     <div class="my-5 d-flex flex-column gap-5" id="posts">
-        <div class="card shadow">
+        <!-- <div class="card shadow">
             <img src="https://cdni.iconscout.com/illustration/premium/thumb/post-like-and-comment-2592610-2175176.png" class="card-img-top" style="object-fit: cover;" height="250" alt="...">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
@@ -30,14 +31,15 @@
               <h6 class="card-subtitle mt-4 mb-3 text-muted ">11:00 11.11.2023</h6>
               <div class="d-flex align-items-center gap-2"> 
                 <img class="rounded-circle shadow" width="50" height="50" style="object-fit: cover;" src="https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/1255/2020/05/18091119/avatar.jpg"></img>
-                <p class="h6">Perriemm MMM</p>
+                <p class="h6">Paula Doe</p>
               </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
 </main> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="./convertedTime.js"></script>
     <script src="./service.js"></script>
     <script src="./index.js"></script>
 </body>
